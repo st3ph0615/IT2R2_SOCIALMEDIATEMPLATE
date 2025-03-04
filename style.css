@@ -11,7 +11,7 @@ body {
     
 }
 
-/* Navigation */
+/* NAVIGATION BAR */
 .navbar {
     top: 0;
     display: flex;
@@ -21,51 +21,41 @@ body {
     padding: 10px 20px;
     color: white;
 }
-/* Navigation Icons */
+/* NAVIGATION ICONS */
 .nav-icon {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 50px;
     height: 50px;
-    border-radius: 5px;
 }
 
-/* Left & Right Sections */
+/*LEFT NAVIGATIONS*/
 .nav-left {
     display: flex;
-    gap: 15px; /* Spacing between icons */
+    gap: 15px;
 }
-/* Default: White icons */
+/*NAVIGATION ICONS*/
 .nav-icon img {
     width: 25px;
     height: 25px;
-    filter: brightness(0) invert(1); /* Turns icons white */
+    filter: brightness(0) invert(1); 
 }
-
-/* Selected Item */
-.nav-icon:hover {
-    background-color: #d1d1d1; /* Light gray background */
+/*HOVER IN NAVIGATION*/
+.nav-icon:hover,
+.nav-right:hover {
+    background-color: #d1d1d1; 
 }
-.nav-right:hover{
-    background-color: #d1d1d1; /* Light gray background */
-
-}
-
-
-/* Selected Icons: Change to dark when inside a white box */
 .nav-icon > img:hover {
     filter: brightness(0); /* Turns the icon dark */
 }
-
-/* Logo */
+/*LOGO NAVIGATION*/
 .logo {
     font-size: 18px;
     color: white;
     margin-top: 18px;
 }
-
-/* Profile Icon */
+/*PROFILE RIGHT NAVIGATION*/
 .profile-icon img {
     width: 35px;
     height: 35px;
