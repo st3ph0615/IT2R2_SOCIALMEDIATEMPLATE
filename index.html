@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+ 
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-left">
+            <a href="#" class="nav-icon hover"><img src="./home_icon.png" alt="Home"></a>
+            <span class="logo">Logo</span>
+            <a href="#" class="nav-icon"><img src="./news_icon.png" alt="Globe"></a>
+            <a href="#" class="nav-icon"><img src="./accountsettings_icon.png" alt="Account Settings"></a>
+            <a href="#" class="nav-icon"><img src="./messages_icon.png" alt="Messages"></a>
+            <div class="nav-icon dropdown">
+                <div class="nav-icon notification-icon">
+                    <img src="./notifications_icon.png" alt="Notifications">
+                    <span class="badge">3</span>
+                </div>
+                <div class="dropdown-content">
+                    <p>One new friend request</p>
+                    <p>John Doe posted on your wall</p>
+                    <p>Jane likes your post</p>
+                </div>
+            </div>
+        </div> 
+        <div class="nav-right">
+            <div class="profile-icon">
+                <a href="#"></a><img src="./profile.png" alt="Profile">
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Left Sidebar -->
+        <div class="left-sidebar">
+            <div class="profile-card">
+                <h3>My Profile</h3>
+                <img src="./My-Profile.png" alt="User" class="profile-img"> 
+                <hr>
+                <div class="profile-info">
+                    <div class="info-item">
+                        <img src="./pencil_icon.png" alt="Designer" class="icon">
+                        <span>Designer, UI</span>
+                    </div>
+                    <div class="info-item">
+                        <img src="./home_icon.png" alt="Country" class="icon">
+                        <span>London, UK</span>
+                    </div>
+                    <div class="info-item">
+                        <img src="./cake_icon.png" alt="Birthday" class="icon">
+                        <span>April 1, 1988</span>
+                    </div>
+             </div>
+            </div>
+            <div class="menu">
+                <a href="#">My Groups</a>
+                <a href="#">My Events</a>
+                <a href="#">My Photos</a>
+            </div>
+            <div class="box" id="alert-box">
+                <span class="box-text">
+                    <strong>Hey!</strong> People are looking at your profile. Find out who.
+                </span>
+                <button class="close-btn" onclick="closeBox()">✖</button>
+            </div>
+            
+            
+        </div>
+
+        <!-- Main Feed -->
+        <div class="main-content">
+            <div class="status-box">
+                <p>Social Media Template</p>
+                <input type="text" placeholder="Status: Feeling Blue">
+                <button class="post-button"><img src="./pencil_icon.png" alt="Post">Post</button>
+            </div>
+
+            <!-- Posts --><!--John Doe Image-->
+            <div class="post">
+                <div class="post-header">
+                    <img src="./profile.png" alt="User">
+                    <h4>John Doe</h4>
+                    <span>1 min ago</span>
+                
+                </div>
+                <hr class="line-John">
+                <p>A breathtaking contrast of nature is captured, with vibrant green lights dancing across a starry sky while golden sunlight bathes a misty mountain valley. The icy landscape glows under the celestial aurora, creating a magical and surreal scene. Meanwhile, warm autumn hues and rolling fog add depth and tranquility to the sunlit wilderness.</p>
+                <div class="post-images"> <!--John Doe Image-->
+                    <img src="./first.png" alt="Post Image">
+                    <img src="./second.png" alt="Post Image">
+                </div>
+                <div class="post-action">
+                    <button class="like"><img src="./like_icon.png" alt="Like">Like</button>
+                    <button class="comment"><img src="./comment_icon.png" alt="Comment">Comment</button>
+                </div>
+            </div>
+
+            <div class="post">
+                <div class="post-header">
+                    <img src="./jane_profile.png" alt="User">
+                    <h4>Jane Doe</h4>
+                    <span>16 min ago</span>
+                </div>
+                <hr>
+                <p>Nature’s beauty is showcased in a striking contrast, where vivid green lights shimmer in the night sky while golden sunlight illuminates a mist-covered mountain valley. The frosty terrain glows beneath the enchanting aurora, creating an ethereal and mesmerizing sight. At the same time, rich autumn colors and drifting fog bring a sense of warmth and serenity to the sunlit landscape.</p>
+                <div class="post-action">
+                    <button class="like"><img src="./like_icon.png" alt="Like">Like</button>
+                    <button class="comment"><img src="./comment_icon.png" alt="Comment">Comment</button>
+                </div>
+            </div>
+            <div class="post">
+                <div class="post-header">
+                    <img src="./angie_profile.png" alt="Angie Jane">
+                    <p>Angie Jane</p>
+                    <span>32 min</span>
+                    <hr>
+                </div>
+                    <hr>
+                    <p>Have you seen this?</p>                   
+                    <img class="nature" src="./nature.png" alt="Nature">
+                    <p>This image showcases a stunning mountain landscape bathed in golden sunlight, possibly during sunrise or sunset. A vast expanse of dense, green forest stretches across rolling hills, with hints of autumn colors adding warmth and depth. Mist drifts gently over the treetops, creating a dreamy and serene atmosphere, while a rugged rock face on the left catches the sunlight, enhancing the dramatic contrast between light and shadow.</p>
+                <div class="post-action">
+                    <button class="like"><img src="./like_icon.png" alt="Like">Like</button>
+                    <button class="comment"><img src="./comment_icon.png" alt="Comment">Comment</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Sidebar -->
+        <div class="right-sidebar">
+            <!-- Upcoming Events -->
+            <div class="event-card">
+                <p class="event-heading">Upcoming Events:</p>
+                <img src="./holiday.png" alt="Event">
+                <p class="event-title"><strong>Holiday</strong></p>
+                <p class="event-time">Friday 15:00</p>
+                <button class="info-btn">Info</button>
+            </div>
+    
+            <!-- Friend Request -->
+            <div class="request-card">
+                <p class="heading">Friend Request</p>
+                <img class="frequest-profile" src="./angie_profile.png" alt="Friend">
+                <p>Jane Doe</p>
+                <div class="friend-actions">
+                    <button class="accept-btn">✔</button>
+                    <button class="decline-btn">✖</button>
+                </div>
+            </div>
+    
+            <!-- Ads Section -->
+            <div class="word-card">
+                <p>ADS</p>
+            </div>
+    
+            <!-- Bug Report Icon -->
+            <div class="ads-card">
+                <img src="./ads.png" alt="Bug">
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
