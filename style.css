@@ -10,7 +10,12 @@ body {
     background-color: #f4f4f4;
     
 }
-
+hr{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 1px solid #eee;
+}
 /* NAVIGATION BAR */
 .navbar {
     top: 0;
@@ -19,7 +24,6 @@ body {
     align-items: center;
     background-color: #3f505f;
     padding: 10px 20px;
-    color: white;
 }
 /* NAVIGATION ICONS */
 .nav-icon {
@@ -36,14 +40,13 @@ body {
     gap: 15px;
 }
 /*NAVIGATION ICONS*/
-.nav-icon img {
+.nav-icon img{
     width: 25px;
     height: 25px;
     filter: brightness(0) invert(1); 
 }
 /*HOVER IN NAVIGATION*/
-.nav-icon:hover,
-.nav-right:hover {
+.nav-icon:hover{
     background-color: #d1d1d1; 
 }
 .nav-icon > img:hover {
@@ -57,20 +60,18 @@ body {
 }
 /*PROFILE RIGHT NAVIGATION*/
 .profile-icon img {
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
+    width: 50px;
+    height: 50px;
     cursor: pointer;
 }
-
-/* Notification Badge */
+/*NOTIFICATION ICON*/
 .notification-icon {
     position: relative;
     display: flex;
     align-items: center;
     cursor: pointer;
 }
-
+/*NOTIFICATION BADGE (3)*/
 .badge {
     position: absolute;
     top: 0px;
@@ -81,39 +82,42 @@ body {
     padding: 3px 7px;
     font-size: 12px;
 }
-
-/* Dropdown Styling */
+/*NOTIFICATION DROPDOWN*/
 .dropdown {
     position: relative;
+    display: inline-block;
 }
-
 .dropdown-content {
     display: none;
     position: absolute;
     background-color: white;
-    color: black;
     left: 0;
     top: 40px;
-    min-width: 200px;
+    min-width: 260px;
     padding: 10px;
     border-radius: 5px;
 }
-
 .dropdown-content p {
     padding: 8px;
-    border-bottom: 1px solid #ddd;
-    font-size: 14px;
+    font-size: 15px;
 }
-
-.dropdown-content p:last-child {
-    border-bottom: none;
+.dropdown-content a {
+    display: block;
+    padding: 5px;
+    text-decoration: none;
+    color: black;
+    transition: background 0.3s;
 }
-
+.dropdown-content a:hover {
+    background: #d1d1d1;
+}
 .dropdown:hover .dropdown-content {
     display: block;
 }
 
-/* Main Layout */
+
+
+/*BODY (MAIN LAYOUT)*/
 .container {
     display: flex;
     width: 100%;
@@ -121,7 +125,7 @@ body {
     align-items: flex-start;
     padding: 25px 100px;
 }
-/* Left Sidebar */
+/*LEFT SIDE OVERALL CONTAINER*/
 .left-sidebar {
     display: flex;
     flex-direction: column;
@@ -129,26 +133,19 @@ body {
     gap: 15px;
     width: 320px;
 }
-
-
-/* Sidebars */
-/* Reset Styles */
-
-/* Sidebar */
+/*MY PROFILE CONTAINER*/
 .profile-card {
     background: white;
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 5px;
     text-align: center;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     width: 350px;
-    height: 300px; /* Adjust height dynamically */
+    height: 300px;
     display: flex;
     flex-direction: column;
-
 }
- 
-/* Profile Image */
+/*PROFILE IMAGE*/
 .profile-img {
     width: 100px;
     height: 100px;
@@ -156,58 +153,86 @@ body {
     margin: 10px 0;
     align-self: center;
 }
-
-/* Divider */
-/* Profile Info */
+/*PROFILE OVERALL INFORMATION*/
 .profile-info {
     display: flex;
     flex-direction: column;
     gap: 15px;
     text-align: left;
-    padding-left: 20px;
 }
-
-/* Info Item */
+/*EACH INFORMATION*/
 .info-item {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
     font-size: 14px;
     color: #333;
 }
-
-/* Icons */
-.icon {
+/*ICONS IN EACH INFORMATION*/
+.icon,
+.menu img {
     width: 16px;
     height: 16px;
     opacity: 0.7;
 }
-/* Menu */
+/*MENU DIV*/
 .menu {
-    background-color: #6c869c; /* Light blue-gray background */
-    border-radius: 10px;
+    background-color: #5f778d;
     padding: 15px 5px;
     margin-top: 20px;
     width: 350px;
     height: 140px;
-    
 }
-
 .menu a {
     display: flex;
     align-items: center;
     padding: 10px;
     color: white;
-    font-size: 16px;
+    font-size: 14px;
     text-decoration: none;
-
 }
-
 .menu a:hover {
-    background-color: #5a758f; /* Darker shade on hover */
+    background-color: #c1c6ca;
+}
+/*INTERESTS OVERALL CONTAINER*/
+.interests-container{
+    background: white;
+    padding: 15px;
+    border-radius: 5px;
+    width: 350px;
+    height: 150px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+.interests-container p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+}
+.interests-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+.tag {
+    padding: 5px 10px;
+    border-radius: NONE;
+    font-size: 11px;
+    display: inline-block;
+}
+.dark {
+    background: #4d687d;
+    color: white;
 }
 
-/* Interests Box */
+.light {
+    background: #bfc9d2;
+    color: #333;
+}
+.extra-light {
+    background: #e8ecef;
+    color: #333;
+}
+/*HEY BOX!*/
 .box {
     background: #d8e1e7; /* Light grayish-blue background */
     padding: 15px;
@@ -247,7 +272,7 @@ body {
     top: 8px;
     right: 10px;
     padding: 5px;
-    border-radius: 50%;
+    border-radius: NONE;
 }
 .close-btn:hover {
     background-color: #c0c9cf;
@@ -256,12 +281,12 @@ body {
 
 
 /*MIDDLE PART*/
-/* Main Feed */
+/*MAIN FEED*/
 .main-content {
     width: 55%;
     max-width: 900px;
 }
-
+/*STATUS DIV*/
 .status-box {
     display: inline-block;
     background: white;
@@ -291,39 +316,12 @@ body {
 }
 .status-box input:focus {
     border: 2px solid black;
-    outline: none; /* Remove default browser focus outline */
+    outline: none; 
 }
-
-.post-button img{
-    width: 16px;
-    height: 16px;
-    filter: brightness(0) invert(1);
-}
-.post-button{
-    background: #3f505f;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    transition: background 0.3s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-  
-}
-.post-button > img:hover {
-    filter: brightness(0);
-}
-.post-button:hover{
-    background-color: #d1d1d1;
-    color: black;
-    border-radius: 5px;
-}
+/*POSTS*/
 .post {
     background: white;
     padding: 20px;
-    border-radius: 5px;
     margin-bottom: 15px;
 }
 .nature{
@@ -339,12 +337,6 @@ body {
     border-radius: 50%;
     margin-right: 10px;
 }
-hr{
-    margin-top: 20px;
-    margin-bottom: 20px;
-    border: 0;
-    border-top: 1px solid #eee;
-}
 .post-images{
     display: block;
 }
@@ -357,6 +349,7 @@ hr{
     gap: 10px;
     margin-top: 20px;
 }
+
 .post-action > button{
     width: 100px;
     height: 35px;
@@ -368,19 +361,57 @@ hr{
     align-items: center;
     text-align: center;
 }
-/*pictures of john doe*/
+
+/*POSTED PICS OF JOHN DOE*/
 .post-images img {
     margin-top: 10px;
     width: 100%;
     max-width: 300px;
     height: auto;
-    border-radius: 5px;
 }
+
 .post-action img{
     width: 16px;
     height: 16px;
     opacity: 0.7;
 }
+
+.post-button img,
+.like img,
+.comment img{
+    width: 16px;
+    height: 16px;
+    filter: brightness(0) invert(1);
+}
+
+.post-button,
+.like,
+.comment{
+    background: #3f505f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  
+}
+
+.post-button:hover{
+    background-color: #d1d1d1;
+    color: black;
+    border-radius: 5px;
+}
+
+.post-button > img:hover,
+.like > img:hover,
+.comment > img:hover {
+    filter: brightness(0);
+}
+
 .post-action .like:hover, 
 .post-action .comment:hover {
     background-color: #d1d1d1;
@@ -392,7 +423,7 @@ hr{
 
 
 
-/* Right Sidebar */
+/*RIGHT SIDE CONTENT*/
 .right-sidebar {
     width: 15%;
     display: flex;
@@ -400,49 +431,43 @@ hr{
     gap: 20px;
 }
 
-/* Card Box */
+/*EVENT DIV*/
 .event-card {
     background: white;
     padding: 10px;
-    border-radius: 10px;
+    border-radius: 5px;
     text-align: center;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     margin-bottom: 5px;
-
 }
-
-/* Images */
-.event-card img {
-    width: 50%;
-    margin-bottom: 10px;
-}
-
-/* Titles */
+/*TITLE*/
 .event-card h4 {
     font-size: 15px;
     color: #333;
     
 }
+/*IMAGE IN THE EVENT DIV*/
+.event-card img {
+    width: 100%;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+/*UPCOMING EVENTS*/
 .event-heading{
     margin-top: 10px;
 }
+/*HOLIDAY*/
 .event-title {
     font-weight: bold;
     font-size: 18px;
     margin-bottom: 10px; /* Increase space below "Holiday" */
 }
-
 .event-time {
     font-size: 16px;
     color: #555;
     margin-bottom: 10px;
 }
-.right-sidebar > .event-card > img{
-    width: 100%;
-    margin-top: 20px;
-}
-
-/* Buttons */
+/*INFO BUTTON*/
 .info-btn {
     background: #c0c7cc;
     border: none;
@@ -453,25 +478,19 @@ hr{
     margin-top: 5px;
     margin-bottom: 10px;
 }
-
 .info-btn:hover {
     background: #a9b0b5;
 }
 
-/* Friend Actions */
+
+/*FRIEND REQUEST DIV*/
 .request-card{
     background: white;
     padding: 10px;
-    border-radius: 10px;
+    border-radius: 5px;
     text-align: center;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     margin-bottom: 5px;
-}
-.friend-actions {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 10px;
 }
 .heading{
     margin-top: 10px;
@@ -482,7 +501,13 @@ hr{
     height: 100px;
     margin-top: 20px;
 }
-/* Accept & Decline Buttons */
+/*BUTTONS*/
+.friend-actions {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
 .accept-btn, .decline-btn {
     border: none;
     padding: 8px 15px;
@@ -490,35 +515,34 @@ hr{
     cursor: pointer;
     width: 100%;
 }
-
 .accept-btn {
     background: #a4d4a5;
     color: white;
 }
-
 .decline-btn {
     background: #e38e8e;
     color: white;
 }
-
 .accept-btn:hover {
     background: #8ec891;
 }
-
 .decline-btn:hover {
     background: #d47777;
 }
+
+
+/*ADS*/
 .word-card{
     background: white;
     padding: 25px;
-    border-radius: 10px;
+    border-radius: 5px;
     text-align: center;
     height: 70px;
 }
 .ads-card{
     background: white;
     padding: 10px;
-    border-radius: 10px;
+    border-radius: 5px;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -526,14 +550,14 @@ hr{
     height: 120px;
 
 }
-/* Bug Icon */
+/*BUG (ADVERTISEMENT*/
 .ads-card img[alt="Bug"] {
     width: 80px;
     height: 80px;
     margin-top: 10px;
     background: white;
     padding: 10px;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 footer{
     color: white;
